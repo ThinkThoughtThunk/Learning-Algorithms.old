@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`fromArray 1`] = `
+│   ┌── 17
+│   │   └── 12
+│   │       └── 10
+└── 9
+    │       ┌── 8
+    │   ┌── 7
+    │   │   └── 6
+    └── 4
+
+`;

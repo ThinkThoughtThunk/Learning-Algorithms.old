@@ -1,0 +1,46 @@
+{
+  "name": "learning-algos",
+  "version": "1.0.0",
+  "description": "Repo for fundamental comp sci algos",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LEDThereBeLight/learning-algos.git"
+  },
+  "keywords": [
+    "javascript",
+    "algorithms"
+  ],
+  "author": "Zachary Bluedorn",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/LEDThereBeLight/learning-algos/issues"
+  },
+  "homepage": "https://github.com/LEDThereBeLight/learning-algos#readme",
+  "devDependencies": {
+    "@types/jest": "^20.0.7",
+    "jest": "^20.0.4",
+    "ts-jest": "^20.0.10",
+    "ts-node": "^3.3.0",
+    "tslint": "^5.6.0",
+    "typescript": "^2.4.2"
+  },
+  "jest": {
+    "transform": {
+      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
+    "snapshotSerializers": [
+      "./tests/btree-serializer.js"
+    ]
+  }
+}
