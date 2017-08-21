@@ -20,8 +20,11 @@ describe('heap api', () => {
   })
   
   it('shows the right min', () => {
-    let min = heap.getMin()
-    expect(min).toEqual(1)
+    let heap = makeHeap([1,6,7,9,3,2,5])
+    expect(heap.getMin()).toEqual(1)
+    while (heap.size() > 0)
+      heap.extractMin()
+    expect(heap.getMin()).toBeUndefined()
   })
   
   it('extracts the right min', () => {

@@ -9,7 +9,7 @@ export interface Heap {
   extractMin(): number
 }
 
-export function makeHeap(input: number[]): Heap {
+export function makeHeap(input: number[] = []): Heap {
   let heap = makeHeapImpl(input)
 
   return {
@@ -19,8 +19,10 @@ export function makeHeap(input: number[]): Heap {
     insert: (n: number): void => 
       insertImpl(n, heap),
       
-    getMin: (): number => 
-      heap.items[1],
+    getMin: (): number => {
+      if (heap.size > 0) 
+        return heap.items[1]
+    },
       
     extractMin: (): number => 
       extractMinImpl(heap)

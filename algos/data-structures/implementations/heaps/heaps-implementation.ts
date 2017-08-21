@@ -1,4 +1,4 @@
-import { swap, range } from '../../utils'
+import { swap, range } from '../../../utils'
 
 // File for the internal implementation of the Heap
 
@@ -7,7 +7,7 @@ export interface HeapImpl {
   size: number
 }
 
-export function makeHeapImpl(input: number[]): HeapImpl {
+export function makeHeapImpl(input: number[] = []): HeapImpl {
   let heap = emptyHeap(),
       firstNode = Math.floor(input.length / 2)
 
