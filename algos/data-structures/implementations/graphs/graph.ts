@@ -1,10 +1,12 @@
 import { range } from '../../../utils'
 
 export interface Edgenode {
-  adjacentVertex: number,
+  adjacentVertex: Vertex,
   weight: number,
   next: Edgenode
 }
+
+export type Vertex = number
 
 export interface Graph {
   edges: Edgenode[],
@@ -26,8 +28,8 @@ export function initializeGraph(
     directed: directed
   }
   
-  for (let i = 1; i <= maxVertices; i++)
-    graph.degree[i] = 0
+  for (let vertex = 1; vertex <= maxVertices; vertex++)
+    graph.degree[vertex] = 0
 
   return graph
 }
@@ -40,14 +42,14 @@ export function readGraph(input: string, directed: boolean): Graph {
   graph.numVertices = numVertices
   // graph.numEdges is set by insertEdge()
   
-  for (let index = 1; index <= numEdges; index++) {
-    let [currentVertex, adjacentVertex] = lines[index].split(' ').map(s => parseInt(s))
+  for (let edgeIndex = 1; edgeIndex <= numEdges; edgeIndex++) {
+    let [currentVertex, adjacentVertex] = lines[edgeIndex].split(' ').map(s => parseInt(s))
     insertEdge(graph, currentVertex, adjacentVertex, directed)
   }
   return graph
 }
 
-export function insertEdge(graph: Graph, currentVertex: number, adjacentVertex: number, directed: boolean): void {
+export function insertEdge(graph: Graph, currentVertex: Vertex, adjacentVertex: Vertex, directed: boolean): void {
   let edgePointer = {
     weight: undefined,
     adjacentVertex: adjacentVertex,
