@@ -33,17 +33,21 @@ I made this repo to store some of my re-implementations of classic algorithms wh
 
 #### Heaps
 
-- insert value
-- peek minimum value
-- remove and return minimum value
-- get size
+```ts
+type Heap = {
+  size(): number
+  insert(n: number): void // effectful
+  getMin(): number
+  extractMin(): number // effectful
+}
+```
 
 #### Priority Queues
 
 > Uses the heap implementation. It's not generic.
 
 ```ts
-interface PriorityQueue {
+type PriorityQueue = {
   enqueue(n: number): void
   dequeue(): number
   isEmpty(): boolean
