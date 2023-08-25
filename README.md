@@ -2,7 +2,7 @@
 
 ## (Old project from the dark ages)
 
-I made this repo to store some of my re-implementations of classic algorithms when I was first learning to code. Pretty simple.
+I made this repo to store some of my re-implementations of classic algorithms when I was first learning to code. It was mostly an excuse to practice TypeScript, so it's pretty simple.
 
 ### Implementations
 
