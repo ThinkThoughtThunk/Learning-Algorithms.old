@@ -1,5 +1,5 @@
-# For personal use
+# Learning Algorithms
 
-Made when learning to code.
+## (Old project from the dark ages)
 
-Repo to put javascript implementations of classic algorithms.
+I made this repo to store some of my re-implementations of classic algorithms when I was first learning to code. 
