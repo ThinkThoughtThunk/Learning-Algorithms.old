@@ -33,7 +33,11 @@ I made this repo to store some of my re-implementations of classic algorithms wh
 
 #### Heaps
 
+> Heaps are encapsulated objects, not open
+
 ```ts
+type MakeHeap = (input: number[]): Heap
+
 type Heap = {
   size(): number
   insert(n: number): void // effectful
